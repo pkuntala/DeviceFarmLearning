@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbe-No-DMm">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hospital List Table View Controller-->
+        <scene sceneID="gbL-WF-5Dh">
+            <objects>
+                <tableViewController id="jbe-No-DMm" customClass="HospitalListTableViewController" customModule="Superheroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pfC-br-6WE">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hospitalCell" rowHeight="450" id="79c-eS-sQF" customClass="HospitalTableViewCell" customModule="Superheroes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.333333969116211" width="428" height="450"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="79c-eS-sQF" id="ZwL-rQ-RCS">
+                                    <rect key="frame" x="0.0" y="0.0" width="428" height="450"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-sI-w4m">
+                                            <rect key="frame" x="7" y="11" width="414" height="414"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rH2-sI-w4m" secondAttribute="height" multiplier="1:1" id="8oI-Nm-jlv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-0I-OXc">
+                                            <rect key="frame" x="10" y="430" width="408" height="19"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="ffv-0I-OXc" secondAttribute="trailing" constant="10" id="TIe-0i-RmY"/>
+                                        <constraint firstAttribute="bottom" secondItem="ffv-0I-OXc" secondAttribute="bottom" constant="1" id="YMZ-WM-SOJ"/>
+                                        <constraint firstItem="rH2-sI-w4m" firstAttribute="top" secondItem="ZwL-rQ-RCS" secondAttribute="topMargin" id="YuH-MP-La1"/>
+                                        <constraint firstItem="rH2-sI-w4m" firstAttribute="centerX" secondItem="ffv-0I-OXc" secondAttribute="centerX" id="oSI-ky-Qod"/>
+                                        <constraint firstItem="ffv-0I-OXc" firstAttribute="top" secondItem="rH2-sI-w4m" secondAttribute="bottom" constant="5" id="q8Y-uJ-0dj"/>
+                                        <constraint firstItem="ffv-0I-OXc" firstAttribute="leading" secondItem="ZwL-rQ-RCS" secondAttribute="leading" constant="10" id="rw3-FK-cj2"/>
+                                        <constraint firstItem="rH2-sI-w4m" firstAttribute="leading" secondItem="ZwL-rQ-RCS" secondAttribute="leadingMargin" constant="-13" id="sKB-t7-4Yd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="Hospital"/>
+                                <connections>
+                                    <outlet property="hospitalImage" destination="rH2-sI-w4m" id="l1W-je-meS"/>
+                                    <outlet property="hospitalName" destination="ffv-0I-OXc" id="BSH-BY-vql"/>
+                                    <segue destination="TUH-mZ-6la" kind="show" identifier="showHospitalDetail" id="5l5-ZL-43g"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jbe-No-DMm" id="a3S-RR-NBR"/>
+                            <outlet property="delegate" destination="jbe-No-DMm" id="EDy-ih-06U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1RU-4y-IlV">
+                        <barButtonItem key="leftBarButtonItem" title="User" image="person.circle.fill" catalog="system" id="6Wm-UX-tgo">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="0aM-Bl-bjM" kind="show" identifier="showUserProfile" id="V4l-7Q-ZEq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hospitalsTableView" destination="pfC-br-6WE" id="LOp-Uf-TKc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVV-rn-73y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179.7101449275362" y="100.44642857142857"/>
+        </scene>
+        <!--userProfile-->
+        <scene sceneID="JYc-aB-tS0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="userProfile" id="0aM-Bl-bjM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7nk-Dy-h9X"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMh-aq-JRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957" y="84"/>
+        </scene>
+        <!--detailView-->
+        <scene sceneID="Edm-8R-ka7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="detailView" id="TUH-mZ-6la" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T8p-9t-TeI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dfy-hg-tqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="208"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

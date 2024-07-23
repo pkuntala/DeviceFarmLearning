@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Superheroes
+
+  Created by Astha Singh on 17/12/21.
+  
+*/
+"Inglesa" = "English";
+"Española" = "Spanish";
+"contraseña" = "Password";
+"ID de usuario" = "User ID";
+"Bienvenida a DeviceFarm" = "Welcome to DeviceFarm";
+"Ingrese su UserID" = "Enter your user Id";
+"Ingresa tu contraseña" = "Enter your password";
+"Has olvidado tu contraseña ?" = "Forgot password?";
+"Acceso" = "Login";
+"Voz" = "Voice";
+
+//User Profile Screen
+"Nombre" = "Name";
+"Datos de contacto" = "Contact info";
+"Actualizar DP" = "Update DP";
+"Subir informes" = "Upload Reports";
+"Invitación" = "Invite";
+"Cerrar sesión"="Logout";
+
+//Hospital Detail Screen
+"Sobre el Hospital" = "About the Hospital";
+"Habla a" = "Address";
+"Doctoras" = "Doctors";

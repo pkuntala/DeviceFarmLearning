@@ -1,0 +1,24 @@
+
+/* Class = "UITextField"; text = "Language"; ObjectID = "Cq5-nC-59N"; */
+"Cq5-nC-59N.text" = "Language";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "Hs2-2H-7rd"; */
+"Hs2-2H-7rd.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "password"; ObjectID = "ZJj-PM-SbS"; */
+"ZJj-PM-SbS.text" = "password";
+
+/* Class = "UILabel"; text = "Forgot password?"; ObjectID = "b6Q-mj-mGZ"; */
+"b6Q-mj-mGZ.text" = "Forgot password?";
+
+/* Class = "UILabel"; text = "User ID"; ObjectID = "bOq-0A-gtD"; */
+"bOq-0A-gtD.text" = "User ID";
+
+/* Class = "UITextField"; placeholder = "Enter your password"; ObjectID = "bh8-oJ-HN7"; */
+"bh8-oJ-HN7.placeholder" = "Enter your password";
+
+/* Class = "UITextField"; placeholder = "Enter your user Id"; ObjectID = "cue-BD-JQy"; */
+"cue-BD-JQy.placeholder" = "Enter your user Id";
+
+/* Class = "UILabel"; text = "Welcome to OurApp"; ObjectID = "zvp-yK-rkX"; */
+"zvp-yK-rkX.text" = "Welcome to OurApp";
